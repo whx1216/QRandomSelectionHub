@@ -5,7 +5,8 @@ QRandomSelectionHub 是一个用于随机抽号、抽奖以及用户管理的开
 ------
 
 ### 测试网站
-
+https://whx1216.top/tools/QRandomSelectionHub/
+OR
 http://47.113.187.48/QRandomSelectionHub/
 
 ## 截图
