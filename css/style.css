@@ -1,0 +1,358 @@
+/* 全局样式 */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --success-color: #4cc9f0;
+    --danger-color: #f72585;
+    --warning-color: #f8961e;
+    --info-color: #4895ef;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --card-border-radius: 12px;
+    --btn-border-radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 页面标题 */
+header h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header .lead {
+    color: #6c757d;
+    font-weight: 300;
+}
+
+/* 卡片样式 */
+.card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* 二维码卡片 */
+.qrcode-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+#qrcode {
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 控制面板 */
+.control-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    margin-bottom: 20px;
+}
+
+/* 动作按钮 */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--btn-border-radius);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-action:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action i {
+    margin-right: 8px;
+}
+
+.btn-draw {
+    background-color: var(--primary-color);
+}
+
+.btn-draw:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-reset {
+    background-color: #6c757d;
+}
+
+.btn-reset:hover {
+    background-color: #5a6268;
+}
+
+.btn-refresh {
+    background-color: var(--info-color);
+}
+
+.btn-refresh:hover {
+    background-color: #3d84d5;
+}
+
+.btn-clear {
+    background-color: var(--danger-color);
+}
+
+.btn-clear:hover {
+    background-color: #e01d6d;
+}
+
+/* 自动刷新开关 */
+.form-check-input {
+    width: 45px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-label {
+    padding-left: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* 结果显示 */
+.result-card {
+    background: linear-gradient(145deg, #ffffff, #f4f7fc);
+}
+
+.winner-display {
+    padding: 30px;
+    font-size: 1.2rem;
+}
+
+/* 用户列表表格 */
+.user-list-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: rgba(67, 97, 238, 0.05);
+    font-weight: 600;
+    border-top: none;
+    color: #495057;
+}
+
+.table td {
+    vertical-align: middle;
+    color: #495057;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(67, 97, 238, 0.03);
+}
+
+/* 徽章样式 */
+.badge {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 6px 12px;
+}
+
+/* 抽号设置 */
+.draw-settings .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: var(--btn-border-radius);
+}
+
+.input-group-text {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+#drawCount {
+    border: 1px solid #e2e6ea;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* 页脚 */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    min-width: 280px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: white;
+    border-left: 5px solid var(--primary-color);
+}
+
+.notification.success {
+    border-left-color: var(--success-color);
+}
+
+.notification.error {
+    border-left-color: var(--danger-color);
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.notification-message {
+    color: #6c757d;
+}
+
+/* 动画类 */
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+/* 控制面板布局优化 */
+.draw-settings .row {
+    margin: 0;
+}
+
+.draw-settings .form-label {
+    font-weight: 600;
+    color: #495057;
+    white-space: nowrap;
+}
+
+.draw-settings .form-check {
+    padding-left: 0;
+}
+
+.draw-settings .form-check-input {
+    margin-left: 0;
+}
+
+/* 控制按钮优化 */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .action-buttons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .draw-settings .row > div {
+        margin-bottom: 10px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 按钮内容对齐 */
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    height: 46px;
+}
